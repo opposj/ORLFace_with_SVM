@@ -74,10 +74,3 @@ class ORLFace(object):
                     else:
                         label.append(np.array([-1]))
                 yield img_read, np.stack(label, axis=1)
-
-
-if __name__ == '__main__':
-    dataset = ORLFace('D:\\PyCharm\\My_project\\Dataset\\ORLFace', 0.3, 3)
-    data_gen = dataset.generate_tr_data(tr_method='one_to_other', class_pos=2, class_neg=3)
-    for data in data_gen:
-        print("OK")
